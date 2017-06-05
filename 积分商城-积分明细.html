@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>惠黎-积分商城-积分明细</title>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/public.js" type="text/javascript"></script>
+<script>
+$(function(){
+	/*导航*/
+	$(".nav_huili ul li").hover(function(){
+		$(".nav_huili ul li").children().removeClass("current_nav");
+		$(this).children().addClass("current_nav");		
+	},function(){
+		$(".nav_huili ul li").children().removeClass("current_nav");
+		$(".nav_huili ul li").eq(4).children().addClass("current_nav");
+	})			
+})
+</script>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!--header-->
+      <div class="header-top">
+        <div class="page-top">
+            <div class="sl_cfrx le_cast_head_left">
+                <div style="padding:6px 8px 0px 0px; float:left;">
+                    <img src="images/cyc_phone.png" width="14" height="20" alt="">
+                </div>
+                <span style="color:#333;">财富热线：</span>
+                <span><b style="color:#00a2ca;font-weight:normal;">400-923-0188</b> （工作日 9:00-18:00）</span>
+                <p class="sl_gk"></p>  
+                <span>关注我们：</span>
+                <ul>
+                    <li>
+                        <div class="weixin1" style="float: left;margin-right: 11px;">
+                            <img src="images/sl_06.png"/>
+                            <div class="xixi">
+                                <img src="images/weixin-1.png" width="100" height="100"> 
+                            </div>
+                        </div>
+                        <div style="left:835px;" class="qq">
+                            <img src="images/sl_07.png">
+                            <div class="qq_one">
+                                  <p style="position:relative;top: 7px;width: 100px;height: 111px;font-size:14px;text-align:center;padding-top:11px;left:-7px;color:#fff;">
+                                    <img src="images/QQ群.png">
+                                  </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+               
+            </div>
+            <div class="sl_qdl">
+               <span><a style="float:left; margin-right: 13px;" href="登录.html">登录</a>  <a style="float:left;color:#00a2ca;" href="个人注册.html">免费注册</a>
+               </span>
+                <p class="sl_gk"></p>
+               <span><a href="企业注册.html">企业用户</a></span>
+               <p class="sl_gk"></p>
+               <a href="手机app.html">
+                   <img src="images/sl_09.png" alt="">
+                   <span>手机app</span>
+               </a>
+                <p class="sl_gk"></p>
+               <span><a href="邀请好友.html">邀请好友</a></span>
+                <p class="sl_gk"></p>
+               <span><a href="帮助中心">帮助中心</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- nav -->  <div class="nav">
+        <div class="sl_content">
+            <img src="images/sl_11.png" alt="">
+            <div class="menu-wz">
+                <ul>
+                   <li><a href="index.html">首页</a></li>
+                    <li class="select_box">
+                         <span><a class="sl_wytz" href="">省心计划</a></span>
+                         <ul class="son_ul" style="display: none;">
+                          <a href="活期宝.html"><li>活    期</li></a>
+                          <a href="定期宝.html"><li>定    期</li></a>
+                        </ul>
+                    </li>
+                    <li><a href="投资产品.html">投资产品</a></li>
+                    <li>
+                       <a href="我要借款.html">我要借款</a>
+                    </li>
+                    <li><a href="积分商城.html">积分商城</a></li>
+                    <li><a href="新手引导.html">新手引导</a></li>
+                    <li><a class="sl_sy current" href="我的账户.html">我的账户</a></li>
+                   
+                </ul>                                 
+            </div>
+        </div>
+    </div>
+
+<!--banner-->
+<div class="banner_point_container">
+	<!--banner图-->
+    <div class="banner_point_box">
+        <a href="">
+            <img src="images/banner_jifen.png" />
+        </a>
+    </div>
+    <!--neirong-->
+    <div class="point_shop_box">
+    	<!--title-->
+        <p class="fontw_size30_color64 color_white font_bolder">积分商城</p>
+        <!--头部-->
+        <div class="point_shop_header">
+        	<!--左侧-->
+            <div class="fl msg_my">
+            	<ul>
+                	<li>
+                    	<img src="images/icon_touxiang.png" />
+                    </li>
+                    <li class="margin_left20 margin_top20">
+                    	<p class="fontw_size18_color64">ifelse</p>
+                        <p class="fontw_size16_color64">积分：<span class="color_red">5840</span></p>
+                    </li>
+                </ul>
+            </div>
+            <!--右侧-->
+            <div class="fr nav_point_box">
+            	<p class="fontw_size14_color64">
+                	<a href="积分商城-积分规则.html" class="fontw_size14_color64">积分规则</a>
+                </p>
+                <ul class="nav_point">
+                	<li>
+                    	<a href="积分商城.html">商城首页</a>
+                    </li>
+                    <li>
+                    	<a href="积分商城-积分兑换.html">积分兑换</a>
+                    </li>
+                    <li>
+                    	<a href="积分商城-积分明细.html" class="current_nav_point">积分明细</a>
+                    </li>
+                    <li>
+                    	<a href="积分商城-我的兑换.html">我的兑换</a>
+                    </li> 
+                </ul>
+                <span class="line_gray"></span>
+            </div>
+        </div>
+        
+        <!--产品-->
+        <div class="exchange_lists mx_point">
+        	<dl class="fontw_size14_color64">
+            	<dt>积分类型</dt>
+                <dt>变动类型</dt>
+                <dt>操作积分值</dt>
+                <dt>操作时间</dt>
+                <dt>备注</dt>
+            </dl>
+            <div>
+                <ul class="fontw_size14_color64">
+                    <li>投标成功</li>
+                    <li>增加</li>
+                    <li><span class="color_red">3</span></li>
+                    <li>2015-07-08 16:20:38</li>
+                    <li>投标成功，3积分</li>
+                </ul>
+                <ul class="fontw_size14_color64">
+                    <li>投标成功</li>
+                    <li>增加</li>
+                    <li><span class="color_red">3</span></li>
+                    <li>2015-07-08 16:20:38</li>
+                    <li>投标成功，3积分</li>
+                </ul>
+                <ul class="fontw_size14_color64">
+                    <li>投标成功</li>
+                    <li>增加</li>
+                    <li><span class="color_red">3</span></li>
+                    <li>2015-07-08 16:20:38</li>
+                    <li>投标成功，3积分</li>
+                </ul>
+                <ul class="fontw_size14_color64">
+                    <li>投标成功</li>
+                    <li>增加</li>
+                    <li><span class="color_red">3</span></li>
+                    <li>2015-07-08 16:20:38</li>
+                    <li>投标成功，3积分</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- footer -->
+    <div class="foot">
+       <div class="foot_in">
+          <div class="content clearfix">
+            <div class="content_l">
+              <dl>
+                <dt><a href="关于我们.html">关于我们</a></dt>
+                <dd><a href="公司介绍.html">公司介绍</a></dd>
+                <dd><a href="团队介绍.html">团队介绍</a></dd>
+                <dd><a href="加入我们.html">加入我们</a></dd>
+                <dd><a href="联系我们.html">联系我们</a></dd>
+              </dl>
+              <dl>
+                <dt><a href="产品服务.html">产品服务</a></dt>
+                <dd><a href="产品介绍.html">产品介绍</a></dd>
+                <dd><a href="业务模式.html">业务模式</a></dd>
+                <dd><a href="新手引导.html">新手引导</a></dd>
+                <dd><a href="网站公告.html">网站公告</a></dd>
+              </dl>
+              <dl>
+                <dt><a href="帮助中心.html">帮助中心</a></dt>
+                <dd><a href="常见问题.html">常见问题</a></dd>
+                <dd><a href="媒体报道.html">媒体报道</a></dd>
+                <dd><a href="平台动态.html">平台动态</a></dd>
+                <dd><a href="合作伙伴.html">合作伙伴</a></dd>
+              </dl>
+              <dl style="margin-right:0;">
+                <dt><a href="联系我们.html">联系我们</a></dt>
+                <dd><a href="">客服电话：400-123-1234 （工作日 9:00-18:00）</a></dd>
+                <dd><a href="">客服邮箱：kefu@bank.com</a></dd>
+                <dd><a href="">公司地址：上海市浦东新区陆家嘴东路161号招商局大厦2410室</a></dd>
+                <dd><a href="">合作邮箱：hezuo@bank.com</a></dd>
+              </dl>
+            </div>
+        
+          </div>
+       </div>
+       <div class="foot_bottom">
+        <div class="foot_bottomIn">
+            <p>上海财翼金融信息服务有限公司版权所有 © 2015 Bank All Rights Reserved 沪ICP备123456789号</p>
+            <p class="sl_kfbf7">
+                <a href="#">
+                    <img src="images/di-ico_48.jpg" >
+                </a>
+                <a href="#">
+                    <img src="images/di-ico_50.jpg" >
+                </a>
+                <a href="#">
+                    <img src="images/di-ico_52.jpg" >
+                </a>
+                <a href="#">
+                    <img src="images/di-ico_54.jpg" >
+                </a>
+                <a href="#">
+                    <img src="images/di-ico_56.jpg" >
+                </a>
+                <a style="margin-right:0;" href="#">
+                    <img src="images/di-ico_52.jpg" >
+                </a>
+                </p>
+        </div>
+     </div>
+     </div>
+
+
+     <ul class="rightIcon" id="rightIcon">
+      <li class="rIcon_toTop" id="back-to-top">
+        <span>
+        </span>
+      </li>
+      <li class="rIcon_tel" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&amp;sid=4000577985&amp;eid=218808P8z8p8q8q8P808R&amp;o=&amp;q=7&amp;ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">
+        <span>
+        在线客服
+            <font style="display: none;">
+                <b>在线客服</b>             
+                    <b style="border-bottom: none;">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"><img src="images/button_51.gif" width="21" height="21">
+                            aaaa1
+                        </a>
+                    </b>
+                <b style="border-bottom: none;">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"><img src="images/button_51.gif" width="21" height="21">
+                            aaaa2
+                        </a>
+                    </b>
+                    <b style="border-bottom: none;">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"><img src="images/button_51.gif" width="21" height="21">
+                            aaaa3
+                        </a>
+                    </b>
+            </font>
+        </span>
+      </li>
+      <li class="rIcon_QQ">
+       <span>
+          <em style="top: 148px; right: 72px; display: none;">
+            <img src="images/sl_24.png">
+          </em>
+          官方微信
+        </span>
+      </li>
+      <li class="rIcon_weixin">
+        <span>
+        <a style="color:#fff;" href="收益计算器.html">服务热线</a> </span>
+      </li>
+      <li class="qq_qun">
+        <span>
+           <a style="color:#fff;" href="收益计算器.html">收益计算器</a> 
+        </span>
+      </li>
+        <li class="fx-lp">
+              <span>
+        风险理赔金
+            <font style="display: none;">
+                <b>理赔金额</b>             
+                    <b style="border-bottom: none; font-size:16px;">
+                        <a target="_blank" href="#">¥100000
+                        </a>
+                    </b>                
+            </font>
+        </span>
+      </li>
+       <li class="rIcon_toTop1">
+       <a href="#">
+        <span>
+        </span>
+        </a>
+      </li>
+    </ul>
+
+      <!--右侧客服特效-->
+    <script type="text/javascript" src="js/jQuery.1.9.1.js" ></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+         $('.son_ul').hide(); //初始ul隐藏
+         $('.select_box span').hover(function(){ //鼠标移动函数
+        $(this).parent().find('ul.son_ul').show();  //找到ul.son_ul显示
+        $(this).parent().find('li').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')}); //li的hover效果
+        $(this).parent().hover(function(){},
+         function(){
+             $(this).parent().find("ul.son_ul").hide(); 
+             }
+         );
+      },function(){}
+      );
+         $('ul.son_ul li').click(function(){
+          $(this).parents('li').find('ul').hide();
+          });
+             }
+             );
+    </script>
+</body>
+</html>

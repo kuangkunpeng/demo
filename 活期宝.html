@@ -1,0 +1,786 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>柚子理财</title>
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<script src="js/public.js" type="text/javascript"></script>
+<script>
+$(function(){
+  /*导航*/
+  $(".nav_huili ul li").hover(function(){
+    $(".nav_huili ul li").children().removeClass("current_nav");
+    $(this).children().addClass("current_nav");   
+  },function(){
+    $(".nav_huili ul li").children().removeClass("current_nav");
+    $(".nav_huili ul li").eq(4).children().addClass("current_nav");
+  })      
+})
+</script>
+
+
+
+
+
+
+<!--右侧客服特效-->
+<script type="text/javascript" src="js/common.js"></script>
+ <!-- ECharts单文件引入 -->
+    <script src="js/echarts-2.2.7/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'js/echarts-2.2.7/build/dist'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+                
+                var option = {
+    title : {
+        text: '',
+        subtext: ''
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['.','y','.']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: false},
+            dataView : {show: false, readOnly: false},
+            magicType : {show:false, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: false},
+            saveAsImage : {show: false}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['09.13','09.15','09.17','09.19','09.21','09.23','09.25','09.27','09.29','10.01','10.03','10.05','10.07','10.09','10.11']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        
+        {
+            name:'y',
+            type:'line',
+            smooth:true,
+            itemStyle: {normal: {areaStyle: {type: 'default',background:'blue'}}},
+            data:[6.055, 6.555, 6.855, 6.355, 6.455, 6.0,6.455,7.455, 7.255,8.073,7.255,6.355,6.455,6.355,7.255]
+        }
+    ]
+};
+                    
+        
+                // 为echarts对象加载数据 
+                myChart.setOption(option); 
+            }
+        );
+    </script>
+
+<!--[if lt IE 9]>
+<style>
+.reveal-modal-bg{filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000,endColorstr=#cc000000);}
+</style>
+<![endif]-->
+<!-- 可能样式在IE8下 有点问题 请用<!----[ if IE9]><![endif]> 进行调试---->
+</head>
+
+<body>
+ <!--header-->
+      <div class="header-top">
+        <div class="page-top">
+            <div class="sl_cfrx le_cast_head_left">
+                <div style="padding:6px 8px 0px 0px; float:left;">
+                    <img src="images/cyc_phone.png" width="14" height="20" alt="">
+                </div>
+                <span style="color:#333;">财富热线：</span>
+                <span><b style="color:#00a2ca;font-weight:normal;">400-923-0188</b> （工作日 9:00-18:00）</span>
+                <p class="sl_gk"></p>  
+                <span>关注我们：</span>
+                <ul>
+                    <li>
+                        <div class="weixin1" style="float: left;margin-right: 11px;">
+                            <img src="images/sl_06.png"/>
+                            <div class="xixi">
+                                <img src="images/weixin-1.png" width="100" height="100"> 
+                            </div>
+                        </div>
+                        <div style="left:835px;" class="qq">
+                            <img src="images/sl_07.png">
+                            <div class="qq_one">
+                                  <p style="position:relative;top: 7px;width: 100px;height: 111px;font-size:14px;text-align:center;padding-top:11px;left:-7px;color:#fff;">
+                                    <img src="images/QQ群.png">
+                                  </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+               
+            </div>
+            <div class="sl_qdl">
+               <span><a style="float:left; margin-right: 13px;" href="登录.html">登录</a>  <a style="float:left;color:#00a2ca;" href="个人注册.html">免费注册</a>
+               </span>
+                <p class="sl_gk"></p>
+               <span><a href="企业注册.html">企业用户</a></span>
+               <p class="sl_gk"></p>
+               <a href="手机app.html">
+                   <img src="images/sl_09.png" alt="">
+                   <span>手机app</span>
+               </a>
+                <p class="sl_gk"></p>
+               <span><a href="邀请好友.html">邀请好友</a></span>
+                <p class="sl_gk"></p>
+               <span><a href="帮助中心">帮助中心</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- nav -->
+   <div class="nav">
+        <div class="sl_content">
+            <img src="images/sl_11.png" alt="">
+            <div class="menu-wz">
+                <ul>
+                   <li><a href="index.html">首页</a></li>
+                    <li class="select_box">
+                         <span><a class="sl_wytz" href="">省心计划</a></span>
+                         <ul class="son_ul" style="display: none;">
+                          <a href="活期宝.html"><li>活    期</li></a>
+                          <a href="定期宝.html"><li>定    期</li></a>
+                        </ul>
+                    </li>
+                    <li><a href="投资产品.html">投资产品</a></li>
+                    <li>
+                       <a href="我要借款.html">我要借款</a>
+                    </li>
+                    <li><a href="积分商城.html">积分商城</a></li>
+                    <li><a href="新手引导.html">新手引导</a></li>
+                    <li><a href="我的账户.html">我的账户</a></li>
+                   
+                </ul>                                 
+            </div>
+        </div>
+    </div>
+ <!--活期宝-->
+ <div class="Jyz-hq-top">
+  <ul>
+   <li>
+    <span>6%-8%</span>
+    <p>稳健的年化收益率</p>
+   </li>
+   <li>
+    <span>27275人</span>
+    <p>明智选择人数</p>
+   </li>
+   <li style="border-right:none;">
+    <span>&yen;6,712,525.31</span>
+    <p>今日转出本金及收益</p>
+   </li>
+  </ul>
+ </div>
+ <!--爱活期-->
+ <div class="Jyz-aihq">
+  <div class="Jyz-ahq-con w1200">
+   <dl class="clearfix">
+    <dt>
+     活期<span>随存随取，按日计息</span>
+    </dt>
+    <dd>每日<i> 7:00 - 22:00</i> 开放购买</dd>
+   </dl>
+   <div class="clear"></div>
+   <ul>
+    <li class="Jyz-ahqc-one">
+     <p>6.9600%</p>
+     <span>万份收益 <em> ¥1.93</em></span>
+    </li>
+    <li class="Jyz-ahqc-two">
+     <div style="height:9px; width:476px;margin-top:33px;background:#dfdfdf;">
+      <div style="width:10%; background:#00a2ca; height:100%;"></div>
+     </div>
+     <p>可买 ¥765,784.00</p>
+    </li>
+    <li class="Jyz-ahqc-three"><a href="javascript:" class="big-link" data-reveal-id="myModal" data-animation="fade">买   入</a>  
+    </li>
+   </ul>
+   <div id="myModal" class="reveal-modal Jyz-rm">
+			<h1>转入爱活期</h1>
+			<a class="close-reveal-modal"><img src="images/Jhq-007.png"/></a>
+            <div class="Jyz-rm-con">
+             <ul>
+              <li>
+               <ol class="clearfix">
+                <li>转入金额：</li>
+                <li><input type="text"/></li>
+                <li>份</li>
+               </ol>
+              </li>
+              <li class="clearfix">
+               <p>可用余额<span>&yen;0.00</span></p>
+               <p>加入份额<span>&yen;0.00</span></p>
+               <p style="margin-right:0;">预计到期收益<span>&yen;0.00</span></p>
+              </li>
+              <li class="Jyz-rmc-btn"><a href="javascript:" >立即转入</a></li>
+              <li class="Jyz-rmc-xieyi"><input type="checkbox" checked='checked'/><a href="javascript:">同意《活期宝服务协议》</a></li>
+             </ul>
+            </div>
+    </div>
+  </div>
+ </div>
+ <!---年化收益走势---->
+ <div class="Jyz-hq-nhzs">
+  <div class="w1200">
+    <ol class="clearfix">
+     <li><h1>年化收益走势</h1></li>
+     <li>
+       <a href="javscript:">一个月</a> <a href="javscript:" class="Jyz-hqh-select">七天</a>
+     </li>
+    </ol>
+    <!---图标走势图--->
+    <div class="Jyz-hqn-list">
+      <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+     <div id="main" style="height:400px"></div>
+    </div>
+    <dl class="clearfix">
+     <dd class="Jyz-hq-current">年化收益（%）</dd>
+     <dd>万份收益（¥）</dd>
+    </dl>
+  </div>
+ </div>
+ <!--三个分图标-->
+
+ <div class="Jyz-hq-youshi">
+  <div class="w1200">
+   <ul>
+    <li>
+     <img src="images/Jhq-003.png"/>
+     <h4>随存随取</h4>
+     <p><span>1元</span>起投，按日计息</p>
+    </li>
+    <li>
+     <img src="images/Jhq-004.png"/>
+     <h4>稳健高收益</h4>
+     <p>余额宝收益的<span>2倍</span>， 银行活期收益的<span>20倍</span></p>
+    </li>
+    <li>
+     <img src="images/Jhq-005.png"/>
+     <h4>真实安全</h4>
+     <p>匹配真实借款，享受平台<span>100%</span>本息保障计划</p>
+    </li>
+   </ul>
+  </div>
+ </div>
+<div class="sl_fffk3">
+  <div class="box">
+    <ul class="tab_menu">
+      <li class="current">产品介绍</li>
+      <li>收益记录<div></div></li>
+      <li>交易记录<div></div></li>
+      <li>常见问题<div></div></li>
+      <li>历史数据</li>
+    </ul>
+    <div class="tab_box">
+      <div>
+        <ul>
+            <li>
+                <h1>活期产品简介</h1>
+                <p>活期理财产品，且投资人可以随时提取账户的资金，方便灵活。投资人的资金用于解决企业资金需求。</p>
+            </li>
+            <li>
+                <h1>发售时间</h1>
+                <p>每日上午11:00 更新发售产品，售完为止。</p>
+            </li>
+            <li>
+                <h1>安全保障</h1>
+                <p>系统安全，定期宝采用业界先进的加密技术，用户的注册、账户收支信息都已进行高强度的加密处理，不会被不法分子窃取；信息安全，严
+                格遵守国家法律法规，对用户的隐私信息进行严格的保护，绝不会将您的账户信息、银行信息以任何形式透露给第三方。 </p>
+            </li>
+        </ul>
+      </div>
+      <div class="hide">
+            <table class="J_table" cellpadding="0" cellspacing="0">
+                      <tbody><tr class="J_hide">
+                        <td>时间</td>
+                        <td>交易金额 </td>
+                        <td>交易类型</td>
+                        <td>起息日 </td>
+                        <td>转出日</td>
+                        <td>日息宝余额</td>
+                      </tr>
+                      <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                      <tr style="background: #f7f8fa;">
+                         <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr style="background: #f7f8fa;">
+                       <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr style="background: #f7f8fa;">
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr style="background: #f7f8fa;">
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr style="background: #f7f8fa;" class="J_wuheng">
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                     
+                    </tbody></table>
+      </div> 
+     <div class="hide">
+            <table class="J_table" cellpadding="0" cellspacing="0">
+                      <tbody><tr class="J_hide">
+                        <td>时间</td>
+                        <td>交易金额 </td>
+                        <td>交易类型</td>
+                        <td>起息日 </td>
+                        <td>转出日</td>
+                        <td>日息宝余额</td>
+                      </tr>
+                      <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                      <tr style="background: #f7f8fa;">
+                         <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr style="background: #f7f8fa;">
+                       <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr style="background: #f7f8fa;">
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr style="background: #f7f8fa;">
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr>
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                       <tr style="background: #f7f8fa;" class="J_wuheng">
+                        <td>2015-09-10  10:20:15  </td>
+                        <td>1000:00</td>
+                        <td>交易类型</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>2015-09-10  10:20:15</td>
+                        <td>1000:00</td>
+                      </tr>
+                     
+                    </tbody></table>
+      </div> 
+      <div class="hide">
+          <dl class="lcxqy-wdk">
+           <dd><img src="images/yqhy-ico5.png" alt="">加入定期的资金什么时候开始计息？</dd>
+           <dt>加入定期的资金实时自动匹配借款项目，当日计息，有效解决资金站岗，为用户赚取最大收益。 </dt>
+           </dl>
+           <dl class="lcxqy-wdk">
+           <dd><img src="images/yqhy-ico5.png" alt="">加入定期的资金什么时候开始计息？</dd>
+           <dt>加入定期的资金实时自动匹配借款项目，当日计息，有效解决资金站岗，为用户赚取最大收益。 </dt>
+           </dl>
+            <dl class="lcxqy-wdk">
+           <dd><img src="images/yqhy-ico5.png" alt="">常见问题</dd>
+           <dt>常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题
+            常见问题常见问题常见问题常见问题常见问题常见问题 </dt>
+           </dl>
+           <dl class="lcxqy-wdk">
+           <dd><img src="images/yqhy-ico5.png" alt="">常见问题</dd>
+           <dt>常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题</dt>
+           </dl>
+            <dl class="lcxqy-wdk">
+           <dd><img src="images/yqhy-ico5.png" alt="">常见问题</dd>
+           <dt>常见问题常见问题常见问题常见问题常见问题常见问题常见问题常见问题</dt>
+           </dl>
+           <dl class="lcxqy-wdk">
+           <dd><img src="images/yqhy-ico5.png" alt="">加入定期的资金什么时候开始计息？</dd>
+           <dt>加入定期的资金实时自动匹配借款项目，当日计息，有效解决资金站岗，为用户赚取最大收益。 </dt>
+           </dl>
+      </div> 
+<div class="hide">
+ <h5 class="dqsjzl">定期交易数据总览</h5>
+ <dl class="ljcj-dq">
+ <dd>累计成交总金额（元）</dd>
+ <dt>1,905,548,007.00</dt>
+ </dl>
+ <dl class="ljcj-dq">
+ <dd>累计成交总金额（元）</dd>
+ <dt>1,905,548,007.00</dt>
+ </dl>
+ <dl class="ljcj-dq">
+ <dd>累计成交总金额（元）</dd>
+ <dt>1,905,548,007.00</dt>
+ </dl>
+ <h5 class="dqsjzl">定期收益对比</h5>
+<div class="dqsy-wk">
+<ol>
+<li><h6>银行</h6><div class="sydb-jd"><div class="sydy-j"></div><img src="images/dq-by.png">　0.25%</div></li>
+<li><h6>某额宝</h6><div class="sydb-jd"><div class="sydy-j" style="width:20%;"></div><img src="images/dq-by.png">　4.4%</div></li>
+<li><h6>定期宝</h6><div class="sydb-jd"><div class="sydy-j" style="width:40%;">></div><img src="images/dq-by.png">　8.212%</div></li>
+</ol>
+</div>
+<div class="sqb-wk">
+<h5>在壹东方成功理财后，可获得高于银行定存、基金等各类理财产品的高额收益</h5>
+<div class="dqb-leftk">
+<h4>安全性</h4>
+<ul>
+<li>自发售以来无逾期和坏账</li>
+<li><b>逾期金额元</b><i>0.00</i></li>
+<li><b>逾期比例 </b><i>0%</i></li>
+<li><b>坏账金额元 </b><i>0.00</i></li>
+<li><b>坏账比例 </b><i>0%</i></li>
+</ul>
+
+</div>
+<div class="dqb-leftk">
+<h4>投资人年龄与性别分布</h4>
+<ul>
+<li><img src="images/dq-tu_03.jpg"></li>
+</ul>
+
+</div>
+<div class="dqb-leftk">
+<h4>投资人学历分布</h4>
+<ul>
+<li><img src="images/dq-tu_05.jpg"></li>
+
+</ul>
+
+</div>
+</div>
+ </div>
+    </div>
+  </div> 
+  </div> 
+
+
+ <!-- footer -->
+    <div class="foot">
+       <div class="foot_in">
+          <div class="content clearfix">
+            <div class="content_l">
+              <dl>
+                <dt><a href="关于我们.html">关于我们</a></dt>
+                <dd><a href="公司介绍.html">公司介绍</a></dd>
+                <dd><a href="团队介绍.html">团队介绍</a></dd>
+                <dd><a href="加入我们.html">加入我们</a></dd>
+                <dd><a href="联系我们.html">联系我们</a></dd>
+              </dl>
+              <dl>
+                <dt><a href="产品服务.html">产品服务</a></dt>
+                <dd><a href="产品介绍.html">产品介绍</a></dd>
+                <dd><a href="业务模式.html">业务模式</a></dd>
+                <dd><a href="新手引导.html">新手引导</a></dd>
+                <dd><a href="网站公告.html">网站公告</a></dd>
+              </dl>
+              <dl>
+                <dt><a href="帮助中心.html">帮助中心</a></dt>
+                <dd><a href="常见问题.html">常见问题</a></dd>
+                <dd><a href="媒体报道.html">媒体报道</a></dd>
+                <dd><a href="平台动态.html">平台动态</a></dd>
+                <dd><a href="合作伙伴.html">合作伙伴</a></dd>
+              </dl>
+              <dl style="margin-right:0;">
+                <dt><a href="联系我们.html">联系我们</a></dt>
+                <dd><a href="">客服电话：400-123-1234 （工作日 9:00-18:00）</a></dd>
+                <dd><a href="">客服邮箱：kefu@bank.com</a></dd>
+                <dd><a href="">公司地址：上海市浦东新区陆家嘴东路161号招商局大厦2410室</a></dd>
+                <dd><a href="">合作邮箱：hezuo@bank.com</a></dd>
+              </dl>
+            </div>
+        
+          </div>
+       </div>
+       <div class="foot_bottom">
+        <div class="foot_bottomIn">
+            <p>上海财翼金融信息服务有限公司版权所有 © 2015 Bank All Rights Reserved 沪ICP备123456789号</p>
+            <p class="sl_kfbf7">
+                <a href="#">
+                    <img src="images/di-ico_48.jpg" >
+                </a>
+                <a href="#">
+                    <img src="images/di-ico_50.jpg" >
+                </a>
+                <a href="#">
+                    <img src="images/di-ico_52.jpg" >
+                </a>
+                <a href="#">
+                    <img src="images/di-ico_54.jpg" >
+                </a>
+                <a href="#">
+                    <img src="images/di-ico_56.jpg" >
+                </a>
+                <a style="margin-right:0;" href="#">
+                    <img src="images/di-ico_52.jpg" >
+                </a>
+                </p>
+        </div>
+     </div>
+     </div>
+
+
+     <ul class="rightIcon" id="rightIcon">
+      <li class="rIcon_toTop" id="back-to-top">
+        <span>
+        </span>
+      </li>
+      <li class="rIcon_tel" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&amp;sid=4000577985&amp;eid=218808P8z8p8q8q8P808R&amp;o=&amp;q=7&amp;ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">
+        <span>
+        在线客服
+            <font style="display: none;">
+                <b>在线客服</b>             
+                    <b style="border-bottom: none;">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"><img src="images/button_51.gif" width="21" height="21">
+                            aaaa1
+                        </a>
+                    </b>
+                <b style="border-bottom: none;">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"><img src="images/button_51.gif" width="21" height="21">
+                            aaaa2
+                        </a>
+                    </b>
+                    <b style="border-bottom: none;">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=&amp;site=qq&amp;menu=yes"><img src="images/button_51.gif" width="21" height="21">
+                            aaaa3
+                        </a>
+                    </b>
+            </font>
+        </span>
+      </li>
+      <li class="rIcon_QQ">
+       <span>
+          <em style="top: 148px; right: 72px; display: none;">
+            <img src="images/sl_24.png">
+          </em>
+          官方微信
+        </span>
+      </li>
+      <li class="rIcon_weixin">
+        <span>
+        <a style="color:#fff;" href="收益计算器.html">服务热线</a> </span>
+      </li>
+      <li class="qq_qun">
+        <span>
+           <a style="color:#fff;" href="收益计算器.html">收益计算器</a> 
+        </span>
+      </li>
+        <li class="fx-lp">
+              <span>
+        风险理赔金
+            <font style="display: none;">
+                <b>理赔金额</b>             
+                    <b style="border-bottom: none; font-size:16px;">
+                        <a target="_blank" href="#">¥100000
+                        </a>
+                    </b>                
+            </font>
+        </span>
+      </li>
+       <li class="rIcon_toTop1">
+       <a href="#">
+        <span>
+        </span>
+        </a>
+      </li>
+    </ul>
+
+      <!--右侧客服特效-->
+    <script type="text/javascript" src="js/jQuery.1.9.1.js" ></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+         $('.son_ul').hide(); //初始ul隐藏
+         $('.select_box span').hover(function(){ //鼠标移动函数
+        $(this).parent().find('ul.son_ul').show();  //找到ul.son_ul显示
+        $(this).parent().find('li').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')}); //li的hover效果
+        $(this).parent().hover(function(){},
+         function(){
+             $(this).parent().find("ul.son_ul").hide(); 
+             }
+         );
+      },function(){}
+      );
+         $('ul.son_ul li').click(function(){
+          $(this).parents('li').find('ul').hide();
+          });
+             }
+             );
+    </script>
+
+
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+ <script type="text/javascript">
+      $(document).ready(function(){
+         $('.son_ul').hide(); //初始ul隐藏
+         $('.select_box span').hover(function(){ //鼠标移动函数
+        $(this).parent().find('ul.son_ul').show();  //找到ul.son_ul显示
+        $(this).parent().find('li').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')}); //li的hover效果
+        $(this).parent().hover(function(){},
+         function(){
+             $(this).parent().find("ul.son_ul").hide(); 
+             }
+         );
+      },function(){}
+      );
+         $('ul.son_ul li').click(function(){
+          $(this).parents('li').find('ul').hide();
+          });
+             }
+             );
+    </script>
+
+
+  <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+  <script src="js/jquery.tabs.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    $('.box').Tabs({
+      event:'click'
+    });
+
+  }); 
+  </script>
+
+</body>
+</html>
